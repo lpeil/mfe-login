@@ -13,7 +13,7 @@ export default defineConfig(({ mode }) => {
         name: 'login',
         filename: 'remoteEntry.js',
         remotes: {
-          core: 'http://localhost:5000/assets/remoteEntry.js',
+          core: process.env.VITE_CORE_URL,
         },
         exposes: {
           './App': './src/App',
